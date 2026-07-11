@@ -1,3 +1,5 @@
+# Day 1
+
 ## Protocol quirks log
 
 ### 1. Every response starts with CON or END
@@ -24,3 +26,10 @@
 
 - If the user types a wrong number, show the menu again with "Invalid. Try again."
 - Ending the session on a bad keystroke is bad UX — feature-phone users will hang up and not re-dial.
+
+# Day 2
+
+## Missing try/catch if Redis goes down - Fixed
+
+- Wrapped Redis operations and the USSD handler in `try/catch`.
+- If Redis becomes unavailable or another unexpected error occurs, the application returns:
